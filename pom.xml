@@ -12,7 +12,7 @@
         <module>example-common</module>
         <module>example-consumer</module>
         <module>example-provider</module>
-        <module>yu-rpc-easy</module>
+        <module>sora-rpc-easy</module>
     </modules>
 
     <properties>
