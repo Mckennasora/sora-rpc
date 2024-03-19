@@ -13,6 +13,7 @@
         <module>example-consumer</module>
         <module>example-provider</module>
         <module>sora-rpc-easy</module>
+        <module>sora-rpc-core</module>
     </modules>
 
     <properties>
