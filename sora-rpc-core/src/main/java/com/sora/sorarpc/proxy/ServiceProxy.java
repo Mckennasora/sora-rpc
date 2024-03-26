@@ -17,6 +17,7 @@ import java.lang.reflect.Method;
 
 /**
  * 服务代理（JDK 动态代理）
+ *
  * @author sora
  */
 public class ServiceProxy implements InvocationHandler {
@@ -58,4 +59,24 @@ public class ServiceProxy implements InvocationHandler {
 
         return null;
     }
+
+    //校验身份证
+    public boolean checkIdCard(String idCard) {
+        if (idCard == null || idCard.length() != 18) {
+            return false;
+        }
+        return true;
+    }
+
+    //校验手机号
+    public boolean checkPhone(String phone) {
+        if (phone == null || phone.length() != 11) {
+            return false;
+        }
+        //正则表达式校验手机号
+        String regExp = "^[1]([3-9])[0-9]{9}$";
+        return phone.matches(regExp);
+    }
+
+
 }
