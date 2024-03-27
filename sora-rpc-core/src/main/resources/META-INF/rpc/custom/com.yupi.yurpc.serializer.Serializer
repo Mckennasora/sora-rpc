@@ -1,0 +1,4 @@
+jdk=com.sora.sorarpc.serializer.JdkSerializer
+hessian=com.sora.sorarpc.serializer.HessianSerializer
+json=com.sora.sorarpc.serializer.JsonSerializer
+kryo=com.sora.sorarpc.serializer.KryoSerializer

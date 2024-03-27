@@ -44,6 +44,14 @@ public class MockServiceProxy implements InvocationHandler {
                 return 0;
             } else if (type == long.class) {
                 return 0L;
+            } else if (type == float.class) {
+                return 0.0f;
+            } else if (type == double.class) {
+                return 0.0d;
+            } else if (type == char.class) {
+                return '\u0000';
+            } else if (type == byte.class) {
+                return (byte) 0;
             }
         }
         // 对象类型
