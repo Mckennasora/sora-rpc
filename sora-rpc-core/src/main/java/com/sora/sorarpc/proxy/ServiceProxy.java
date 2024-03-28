@@ -9,7 +9,6 @@ import cn.hutool.http.HttpResponse;
 import com.sora.sorarpc.RpcApplication;
 import com.sora.sorarpc.model.RpcRequest;
 import com.sora.sorarpc.model.RpcResponse;
-import com.sora.sorarpc.serializer.JdkSerializer;
 import com.sora.sorarpc.serializer.Serializer;
 import com.sora.sorarpc.serializer.SerializerFactory;
 
