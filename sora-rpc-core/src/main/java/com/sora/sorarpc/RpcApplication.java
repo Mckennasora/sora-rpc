@@ -1,8 +1,11 @@
 package com.sora.sorarpc;
 
 
+import com.sora.sorarpc.config.RegistryConfig;
 import com.sora.sorarpc.config.RpcConfig;
 import com.sora.sorarpc.constant.RpcConstant;
+import com.sora.sorarpc.registry.Registry;
+import com.sora.sorarpc.registry.RegistryFactory;
 import com.sora.sorarpc.utils.ConfigUtils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,6 +26,11 @@ public class RpcApplication {
     public static void init(RpcConfig newRpcConfig) {
         rpcConfig = newRpcConfig;
         log.info("rpc init, config = {}", newRpcConfig.toString());
+        // 注册中心初始化
+        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
+        Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
+        registry.init(registryConfig);
+        log.info("registry init, config = {}", registryConfig);
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.sora.sorarpc.config;
 
+import cn.hutool.core.util.StrUtil;
 import com.sora.sorarpc.serializer.SerializerKeys;
 import lombok.Data;
 
@@ -12,7 +13,7 @@ public class RpcConfig {
     /**
      * 名称
      */
-    private String name = "yu-rpc";
+    private String name = "sora-rpc";
 
     /**
      * 版本号
@@ -38,5 +39,10 @@ public class RpcConfig {
      * 序列化器
      */
     private String serializer = SerializerKeys.JDK;
+
+    /**
+     * 注册中心配置
+     */
+    private RegistryConfig registryConfig;
 
 }
